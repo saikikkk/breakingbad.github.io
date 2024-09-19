@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Во все тяжкие</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/site.png" type="image/png">
 </head>
 <body>
     <header>
-        <h1>Во все тяжкие</h1>
+        <div style="font-size: 30px; text-align:center; padding-bottom: 5px; margin-bottom: 10px; margin-top: 0;">
+            <b>Welcome to the 
+                <div style="display: inline-block; color: #fff; width: 60px; height: 60px; line-height: 65px; background: #1b370f; 
+                border: 3px solid #fff; font-size: 36px; font-weight: bold; text-align: center; letter-spacing: -1px; cursor: pointer; 
+                position: relative; background: linear-gradient(135deg, #1b370f 0%,#53af6c 100%); text-transform: capitalize; 
+                text-shadow: none; font-style: normal;">br
+                    <div style="font-size: 8px; position: absolute; height: 10px; width: 30px; 
+                    top: 5px; right: 5px; line-height: 10px; letter-spacing: 0px; text-align: right;">35</div>
+                </div>
+                eaking 
+                <div style="display: inline-block; color: #fff; width: 60px; height: 60px; line-height: 65px; background: #1b370f; border: 3px solid #fff; 
+                font-size: 36px; font-weight: bold; text-align: center; letter-spacing: -1px; cursor: pointer; position: relative; 
+                background: linear-gradient(135deg, #1b370f 0%,#53af6c 100%); text-transform: capitalize; text-shadow: none; font-style: normal;">ba
+                    <div style="font-size: 8px; position: absolute; height: 10px; width: 30px; top: 5px; right: 5px; line-height: 10px; letter-spacing: 0px; text-align: right;">56
+                    </div>
+                </div>d Wiki</b>
+        </div>
         <nav>
             <ul>
                 <li><a href="#about">О сериале</a></li>
@@ -19,21 +36,83 @@
     </header>
 
     <section id="about">
-        <h2>О сериале</h2>
-        <p>«Во все тяжкие» — это американский криминальный драмеди-сериал, созданный Винсом Гиллиганом. Сюжет рассказывает о бывшем учителе химии, который становится производителем метамфетамина.</p>
-    </section>
-
+        <div style="font-size: 30px; text-align:center; border-bottom: 1px solid; padding-bottom: 5px; margin-top: 20px; margin-bottom: 10px;">
+            <b>About <div style="display: inline-block; color: #fff; width: 60px; height: 60px; line-height: 65px; background: #1b370f; border: 3px solid #fff; font-size: 36px; font-weight: bold; text-align: center; letter-spacing: -1px; cursor: pointer; position: relative; background: linear-gradient(135deg, #1b370f 0%,#53af6c 100%); text-transform: capitalize; text-shadow: none; font-style: normal;">
+                Th<div style="font-size: 8px; position: absolute; height: 10px; width: 30px; top: 5px; right: 5px; line-height: 10px; letter-spacing: 0px; text-align: right;">
+                228</div></div>e show
+            </b>
+        </div>
+        <div id="textContainer">
+            <p>
+                Основная сюжетная линия сериала выстраивается вокруг Уолтера Уайта – пятидесятилетнего учителя, преподающего химию в средней школе. 
+                Денег у Уолтера в обрез, поэтому в свободное от преподавания время мистер Уайт подрабатывает на автомойке, что вызывает всплеск иронии и насмешек со стороны его учеников. 
+                Финансов едва хватает на содержание семьи, состоящей из беременной жены и сына-инвалида. 
+                Свояк Уайта (его зовут Хэнк) строит карьеру в Управлении по борьбе с наркотиками и однажды предлагает главному герою принять участие в облаве наркодиллера, 
+                изготавливающего запрещенные препараты.
+            </p>
+            <p id="moreText" class="hidden">
+                Во время облавы мистер Уайт узнает в преступнике своего бывшего ученика, так отчаянно издевавшегося над ним в стенах школы несколько лет назад. 
+                Вместо того, чтобы сдать правонарушителя в руки властям, Уолтер заключает с ним пари, согласно которому они вместе начинают изготавливать метамфетамин, 
+                в надежде поднять своё финансовое положение. Уолтера Уйта можно понять: падая в яму безденежья и стоя на пороге развода с собственной женой, 
+                у него обнаруживают рак последней стадии. Припоминая рассказы Хэнка о прибыльности наркодиллерского ремесла и, пытаясь вновь обрести уважение со стороны своей семьи, 
+                Уолтер Уайт продумывает план по обогащению своего кармана в надежде на то, что после его кончины близкие ни в чем не будут нуждаться. 
+                Терять герою нечего, поэтому вместе со своим новым напарником он берёт в прокат трейлер и уезжает на нём в пустыню, 
+                где школьный учитель начинает варить метамфетамин по своей фирменной формуле. 
+                Новинка становится популярной, и Уолтер со своим помощником получает деньги, о которых они и мечтать не могли. 
+                Однако богатые тоже плачут, и к большим деньгам учитель химии получает большие проблемы…
+            </p>
+        </div>
+        <button id="toggleButton">Далее</button>
+         <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            const moreText = document.getElementById("moreText");
+            if (moreText.classList.contains("hidden")) {
+                moreText.classList.remove("hidden");
+                this.textContent = "Скрыть"; // Изменить текст кнопки на "Скрыть"
+            } else {
+                moreText.classList.add("hidden");
+                this.textContent = "Далее"; // Вернуть текст кнопки на "Далее"
+            }
+        });
+    </script>
+    
     <section id="characters">
-        <h2>Персонажи</h2>
-        <ul>
-            <li>Уолтер Уайт</li>
-            <li>Джесси Пинкман</li>
-            <li>Скайлер Уайт</li>
-            <li>Хэнк Шрейдер</li>
-        </ul>
+    <div style="font-size: 30px; text-align:center; border-bottom: 1px solid; padding-bottom: 5px; margin-top: 20px; margin-bottom: 10px;">
+        <b>Ch<div style="display: inline-block; color: #fff; width: 60px; height: 60px; line-height: 65px; background: #1b370f; border: 3px solid #fff; font-size: 36px; font-weight: bold; text-align: center; letter-spacing: -1px; cursor: pointer; position: relative; background: linear-gradient(135deg, #1b370f 0%,#53af6c 100%); text-transform: capitalize; text-shadow: none; font-style: normal;">
+            ar<div style="font-size: 8px; position: absolute; height: 10px; width: 30px; top: 5px; right: 5px; line-height: 10px; letter-spacing: 0px; text-align: right;">
+            16</div></div>acters
+        </b>
+    </div>
+
+    <div style="text-align: center;">
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/walter.html" title="Walter White"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Walter</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/walter.html" title="Walter White"><img alt="Walter White" src="https://static.wikia.nocookie.net/breakingbad/images/e/e7/BB-S5B-Walt-590.jpg/revision/latest/scale-to-width-down/130?cb=20130928055404" decoding="async" loading="lazy" width="130" height="173" data-image-name="BB-S5B-Walt-590.jpg" data-image-key="BB-S5B-Walt-590.jpg" data-relevant="0" data-src="https://static.wikia.nocookie.net/breakingbad/images/e/e7/BB-S5B-Walt-590.jpg/revision/latest/scale-to-width-down/130?cb=20130928055404" class=" lazyloaded"></a></div></div></div></div>
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/jesse.html" title="Jesse Pinkman"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Jesse</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/jesse.html" title="Jesse Pinkman"><img alt="Jesse Pinkman" src="https://static.wikia.nocookie.net/breakingbad/images/0/0c/JesseS5B.jpg/revision/latest/scale-to-width-down/130?cb=20130804210124" decoding="async" loading="lazy" width="130" height="173" data-image-name="JesseS5B.jpg" data-image-key="JesseS5B.jpg" data-relevant="1" data-src="https://static.wikia.nocookie.net/breakingbad/images/0/0c/JesseS5B.jpg/revision/latest/scale-to-width-down/130?cb=20130804210124" class=" lazyloaded"></a></div></div></div></div>
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/jimmy.html" title="Jimmy McGill"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Jimmy</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/jimmy.html" title="Jimmy McGill"><img alt="Jimmy McGill" src="https://static.wikia.nocookie.net/breakingbad/images/2/28/Jimmy_S5_mini.png/revision/latest/scale-to-width-down/130?cb=20200302221509" decoding="async" loading="lazy" width="130" height="186" data-image-name="Jimmy S5 mini.png" data-image-key="Jimmy_S5_mini.png" data-relevant="1" data-src="https://static.wikia.nocookie.net/breakingbad/images/2/28/Jimmy_S5_mini.png/revision/latest/scale-to-width-down/130?cb=20200302221509" class=" lazyloaded"></a></div></div></div></div>
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/mike.html" title="Mike Ehrmantraut"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Mike</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/mike.html" title="Mike Ehrmantraut"><img alt="Mike Ehrmantraut" src="https://static.wikia.nocookie.net/breakingbad/images/3/36/Mike_S5_mini.png/revision/latest/scale-to-width-down/130?cb=20200302221556" decoding="async" loading="lazy" width="130" height="180" data-image-name="Mike S5 mini.png" data-image-key="Mike_S5_mini.png" data-relevant="1" data-src="https://static.wikia.nocookie.net/breakingbad/images/3/36/Mike_S5_mini.png/revision/latest/scale-to-width-down/130?cb=20200302221556" class=" lazyloaded"></a></div></div></div></div>
+    </div>
+    <div style="text-align: center;">
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/skyler.html" title="Skyler"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Skyler</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/skyler.html" title="Skyler"><img alt="Skyler" src="https://static.wikia.nocookie.net/breakingbad/images/3/33/Skyler_S5b.jpg/revision/latest/scale-to-width-down/130?cb=20130717044318" decoding="async" loading="lazy" width="130" height="173" data-image-name="BB-S5B-Walt-590.jpg" data-image-key="BB-S5B-Walt-590.jpg" data-relevant="0" data-src="https://static.wikia.nocookie.net/breakingbad/images/e/e7/BB-S5B-Walt-590.jpg/revision/latest/scale-to-width-down/130?cb=20130928055404" class=" lazyloaded"></a></div></div></div></div>
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/marie.html" title="Marie"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Marie</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/marie.html" title="Marie"><img alt="Marie" src="https://static.wikia.nocookie.net/breakingbad/images/b/b7/Marie_S5b.jpg/revision/latest/scale-to-width-down/130?cb=20130717044235" decoding="async" loading="lazy" width="130" height="173" data-image-name="JesseS5B.jpg" data-image-key="JesseS5B.jpg" data-relevant="1" data-src="https://static.wikia.nocookie.net/breakingbad/images/0/0c/JesseS5B.jpg/revision/latest/scale-to-width-down/130?cb=20130804210124" class=" lazyloaded"></a></div></div></div></div>
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/hank.html" title="Hank"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Hank</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/hank.html" title="Hank"><img alt="Hank" src="https://static.wikia.nocookie.net/breakingbad/images/7/7b/Hank_S5b.jpg/revision/latest/scale-to-width-down/130?cb=20130717044210" decoding="async" loading="lazy" width="130" height="186" data-image-name="Jimmy S5 mini.png" data-image-key="Jimmy_S5_mini.png" data-relevant="1" data-src="https://static.wikia.nocookie.net/breakingbad/images/2/28/Jimmy_S5_mini.png/revision/latest/scale-to-width-down/130?cb=20200302221509" class=" lazyloaded"></a></div></div></div></div>
+        <div class="character-cell" style="overflow: hidden; border:3px solid #337800; border-radius:5px; display:inline-block;"><div style="position:relative; height: 170px; width: 130px;"><div style="position: absolute; border-radius: 8px 0 0 0; bottom: 0px; right: 0px; padding: 1% 0 0 3%; overflow: hidden; line-height: 12px; z-index: 4; background:#337800;" align="right"><a href="wiki/gustavo.html" title="gustavo"><span style="color:white;font-size: x-small; font-weight: bold;"><b>Gustavo</b></span></a></div>
+        <div style="position: absolute; top: 0px; left: 0px; height: 170px; width: 130px; overflow: hidden"><div style="position: absolute; top: 0px; left: 0px; z-index: 2"><a href="wiki/gustavo.html" title="Gustavo"><img alt="Gustavo" src="https://static.wikia.nocookie.net/breakingbad/images/9/9d/Gus_S5_mini.png/revision/latest/scale-to-width-down/130?cb=20200302221440" decoding="async" loading="lazy" width="130" height="180" data-image-name="Mike S5 mini.png" data-image-key="Mike_S5_mini.png" data-relevant="1" data-src="https://static.wikia.nocookie.net/breakingbad/images/3/36/Mike_S5_mini.png/revision/latest/scale-to-width-down/130?cb=20200302221556" class=" lazyloaded"></a></div></div></div></div>
+    </div>
     </section>
 
     <section id="episodes">
+        <div style="font-size: 30px; text-align:center; border-bottom: 1px solid; padding-bottom: 5px; margin-top: 20px; margin-bottom: 10px;">
+            <b><div style="display: inline-block; color: #fff; width: 60px; height: 60px; line-height: 65px; background: #1b370f; border: 3px solid #fff; font-size: 36px; font-weight: bold; text-align: center; letter-spacing: -1px; cursor: pointer; position: relative; background: linear-gradient(135deg, #1b370f 0%,#53af6c 100%); text-transform: capitalize; text-shadow: none; font-style: normal;">
+                Ep<div style="font-size: 8px; position: absolute; height: 10px; width: 30px; top: 5px; right: 5px; line-height: 10px; letter-spacing: 0px; text-align: right;">
+                12</div></div>isode
+            </b>
+        </div>
         <h2>Эпизоды</h2>
         <button id="loadEpisodes">Загрузить эпизоды</button>
         <div id="episodeList"></div>

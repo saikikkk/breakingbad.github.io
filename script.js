@@ -3,7 +3,6 @@ document.getElementById('loadEpisodes').addEventListener('click', function() {
     
     var episodeList = document.getElementById('episodeList');
     
-    // Пример данных эпизодов
     var episodes = [
         'Сезон 1, Эпизод 1: Пилот',
         'Сезон 1, Эпизод 2: Кот в мешке',
